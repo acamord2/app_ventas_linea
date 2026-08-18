@@ -1,0 +1,28 @@
+import 'package:clientes_app/core/constants/AppStrings.dart';
+import 'package:flutter/material.dart';
+
+class ItemsNavBarHome {
+  static const List<NavigationDestination> destinations = [
+    NavigationDestination(
+      icon: Icon(Icons.home_outlined),
+      selectedIcon: Icon(Icons.home),
+      label: AppStrings.home,
+    ),
+    NavigationDestination(
+      icon: Icon(Icons.shopping_bag_outlined),
+      selectedIcon: Icon(Icons.shopping_bag),
+      label: AppStrings.tienda,
+    ),
+    NavigationDestination(
+      icon: Icon(Icons.shopping_cart_outlined),
+      selectedIcon: Icon(Icons.shopping_cart),
+      label: AppStrings.carrito,
+    ),
+    NavigationDestination(
+      icon: Icon(Icons.person_outline),
+      selectedIcon: Icon(Icons.person),
+      label: AppStrings.perfil,
+    ),
+    
+  ];
+}
