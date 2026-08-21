@@ -1,17 +1,16 @@
 import 'package:clientes_app/core/constants/AppColors.dart';
 import 'package:clientes_app/core/constants/AppTextStyles.dart';
-import 'package:clientes_app/core/constants/AppStrings.dart';
-import 'package:clientes_app/features/Home/presentation/views/HomeLayoutMain.dart';
+import 'package:clientes_app/core/constants/AppTexts.dart';
 import 'package:flutter/material.dart';
 
-class BottonLogin extends StatefulWidget {
-  const BottonLogin({super.key});
+class BottonComprar extends StatefulWidget {
+  const BottonComprar({super.key});
 
   @override
-  State<BottonLogin> createState() => _BottonLoginState();
+  State<BottonComprar> createState() => _BottonComprarState();
 }
 
-class _BottonLoginState extends State<BottonLogin> {
+class _BottonComprarState extends State<BottonComprar> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -19,10 +18,6 @@ class _BottonLoginState extends State<BottonLogin> {
       height: 50,
       child: ElevatedButton(
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => const HomeLayoutMain()),
-          );
         },
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColors.primary,
@@ -33,7 +28,7 @@ class _BottonLoginState extends State<BottonLogin> {
           ),
         ),
         child: Text(
-          AppStrings.bottonLogin,
+          AppTexts.aceptar,
           style: AppTextStyles.button,
         ),
       ),

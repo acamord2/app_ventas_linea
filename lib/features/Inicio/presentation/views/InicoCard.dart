@@ -10,12 +10,18 @@ class InicoCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              ContenedorPrincipal(contenidoSeccion: Trayectoria()),
-              ContenedorPrincipal(contenidoSeccion: CategoriasContent(),),
-            ],
+        child: ScrollConfiguration(
+          behavior: const MaterialScrollBehavior().copyWith(
+            overscroll: false,
+          ),
+          child: SingleChildScrollView(
+            physics: const ClampingScrollPhysics(),
+            child: Column(
+              children: const [
+                ContenedorPrincipal(contenidoSeccion: Trayectoria()),
+                ContenedorPrincipal(contenidoSeccion: CategoriasContent()),
+              ],
+            ),
           ),
         ),
       ),

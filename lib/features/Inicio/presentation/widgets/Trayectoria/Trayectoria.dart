@@ -1,6 +1,7 @@
 import 'package:clientes_app/core/constants/AppColors.dart';
-import 'package:clientes_app/core/constants/AppStrings.dart';
+import 'package:clientes_app/core/constants/AppTexts.dart';
 import 'package:clientes_app/core/constants/AppTextStyles.dart';
+import 'package:clientes_app/features/Inicio/data/models/TrayectoriasList.dart';
 import 'package:clientes_app/features/Inicio/presentation/widgets/Trayectoria/InfoTrayectoria.dart';
 import 'package:clientes_app/features/Inicio/presentation/widgets/Trayectoria/cardTrallectoria.dart';
 import 'package:flutter/material.dart';
@@ -10,6 +11,7 @@ class Trayectoria extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -20,42 +22,21 @@ class Trayectoria extends StatelessWidget {
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           physics: const BouncingScrollPhysics(),
+          padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Row(
-            children: [
-              CardTrallectoria(
-                icono: Icons.access_time_outlined,
-                body: AppStrings.descExperiencia,
-                subtitulo: AppStrings.tiempoExp,
-                titulo: AppStrings.textExperiencia,
-              ),
-
-              const SizedBox(width: 14),
-
-              CardTrallectoria(
-                icono: Icons.storefront_outlined,
-                body: AppStrings.descSucursales,
-                subtitulo: AppStrings.tiendasFisicas,
-                titulo: AppStrings.textSucursales,
-              ),
-
-              const SizedBox(width: 14),
-
-              CardTrallectoria(
-                icono: Icons.factory_outlined,
-                body: AppStrings.descFabricacion,
-                subtitulo: AppStrings.calidadControlada,
-                titulo: AppStrings.textFabricacion,
-              ),
-
-              const SizedBox(width: 14),
-
-              CardTrallectoria(
-                icono: Icons.verified_user_outlined,
-                body: AppStrings.descGarantia,
-                subtitulo: AppStrings.compraSegura,
-                titulo: AppStrings.textGarantia,
-              ),
-            ],
+            children: List.generate(TrayectoriasList.trayectorias.length, (index) {
+              return Padding(
+                padding: EdgeInsets.only(
+                  right: index == TrayectoriasList.trayectorias.length - 1 ? 0 : 8,
+                ),
+                child: CardTrallectoria(
+                  icono: TrayectoriasList.trayectorias[index].icono,
+                  body: TrayectoriasList.trayectorias[index].body,
+                  subtitulo: TrayectoriasList.trayectorias[index].subtitulo,
+                  titulo: TrayectoriasList.trayectorias[index].titulo,
+                ),
+              );
+            }),
           ),
         ),
 
@@ -72,10 +53,10 @@ class Trayectoria extends StatelessWidget {
               style: AppTextStyles.label,
               children: [
                 TextSpan(
-                  text: AppStrings.nombreEmpresa,
+                  text: AppTexts.aceptar,
                   style: AppTextStyles.bodyBold,
                 ),
-                TextSpan(text: AppStrings.fotherTrayectoria),
+                TextSpan(text: AppTexts.aceptar),
               ],
             ),
           ),

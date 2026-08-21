@@ -1,5 +1,5 @@
 import 'package:clientes_app/core/constants/AppTextStyles.dart';
-import 'package:clientes_app/core/constants/AppStrings.dart';
+import 'package:clientes_app/core/constants/AppTexts.dart';
 import 'package:flutter/material.dart';
 
 class CrearRegistro extends StatefulWidget {
@@ -15,11 +15,11 @@ class _CrearRegistroState extends State<CrearRegistro> {
     return Center(
       child: Column(
         children: [
-          Text(AppStrings.complementRegisterLogin, style: AppTextStyles.subtitle),
+          Text(AppTexts.aceptar, style: AppTextStyles.subtitle),
           GestureDetector(
             onTap: () {},
             child: Text(
-              AppStrings.registerLogin,
+              AppTexts.aceptar,
               style: AppTextStyles.body,
             ),
           ),

@@ -95,10 +95,10 @@ class _CardTrallectoriaState extends State<CardTrallectoria>
         color: const Color(0xFFF7F7F5),
         borderRadius: BorderRadius.circular(14),
         border: Border.all(
-          color: AppColors.textDisabled.withOpacity(0.3),
+          color: AppColors.background.withOpacity(0.3),
           width: 1.5,
         ),
-      ),
+      ),          
       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 16),
       child: child,
     );

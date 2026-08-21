@@ -1,8 +1,7 @@
 import 'package:clientes_app/core/constants/AppColors.dart';
 import 'package:clientes_app/features/Auth/presentation/views/LoginSeccion.dart';
-import 'package:clientes_app/features/Auth/presentation/widgets/CrearRegistro.dart';
+import 'package:clientes_app/features/Auth/presentation/widgets/ButtonsLogin.dart';
 import 'package:clientes_app/features/Auth/presentation/widgets/TituloLogin.dart';
-import 'package:clientes_app/features/Auth/presentation/widgets/bottonLogin.dart';
 import 'package:flutter/material.dart';
 
 class LoginContainer extends StatefulWidget {
@@ -42,10 +41,12 @@ class _LoginContainerState extends State<LoginContainer> {
               LoginSeccion(esPass: false), // seccion User
               SizedBox(height: 16),
               LoginSeccion(esPass: true), // seccion password
-              SizedBox(height: 25),
-              BottonLogin(),
-              SizedBox(height: 25),
-              CrearRegistro(),
+              SizedBox(height: 30),
+              ButtonsLogin(isAcces: true),
+              //BottonLogin(),
+              SizedBox(height: 8),
+              ButtonsLogin(isAcces: false),
+              //BottonCrearCuenta(),
               SizedBox(height: 8),
             ],
           ),

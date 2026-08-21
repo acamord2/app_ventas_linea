@@ -1,4 +1,4 @@
-import 'package:clientes_app/core/constants/AppStrings.dart';
+import 'package:clientes_app/core/constants/AppTexts.dart';
 import 'package:flutter/material.dart';
 
 class ItemsNavBarHome {
@@ -6,22 +6,22 @@ class ItemsNavBarHome {
     NavigationDestination(
       icon: Icon(Icons.home_outlined),
       selectedIcon: Icon(Icons.home),
-      label: AppStrings.home,
+      label: AppTexts.home,
     ),
     NavigationDestination(
       icon: Icon(Icons.shopping_bag_outlined),
       selectedIcon: Icon(Icons.shopping_bag),
-      label: AppStrings.tienda,
+      label: AppTexts.sinResultados,
     ),
     NavigationDestination(
       icon: Icon(Icons.shopping_cart_outlined),
       selectedIcon: Icon(Icons.shopping_cart),
-      label: AppStrings.carrito,
+      label: AppTexts.carrito,
     ),
     NavigationDestination(
       icon: Icon(Icons.person_outline),
       selectedIcon: Icon(Icons.person),
-      label: AppStrings.perfil,
+      label: AppTexts.perfil,
     ),
     
   ];

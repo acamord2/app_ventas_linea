@@ -1,5 +1,5 @@
 import 'package:clientes_app/core/constants/AppTextStyles.dart';
-import 'package:clientes_app/core/constants/AppStrings.dart';
+import 'package:clientes_app/core/constants/AppTexts.dart';
 import 'package:flutter/material.dart';
 
 class InfoCompraCategoria extends StatelessWidget {
@@ -10,9 +10,9 @@ class InfoCompraCategoria extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(AppStrings.categoriaText, style: AppTextStyles.title),
+        Text(AppTexts.aceptar, style: AppTextStyles.title),
         SizedBox(height: 2),
-        Text(AppStrings.descCategoria, style: AppTextStyles.label,),
+        Text(AppTexts.aceptar, style: AppTextStyles.label,),
       ],
     );
   }

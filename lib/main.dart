@@ -1,4 +1,4 @@
-import 'package:clientes_app/features/Auth/presentation/views/LoginMain.dart';
+import 'package:clientes_app/routes/AppRouter.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: LoginMain());
+    return MaterialApp.router(debugShowCheckedModeBanner: false,
+    routerConfig: appRura,);
   }
 }

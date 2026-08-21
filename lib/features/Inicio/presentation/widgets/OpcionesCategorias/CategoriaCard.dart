@@ -1,12 +1,18 @@
 import 'package:clientes_app/core/constants/AppTextStyles.dart';
 import 'package:clientes_app/core/constants/AppColors.dart';
+import 'package:clientes_app/features/Inicio/presentation/widgets/OpcionesCategorias/BottonComprar.dart';
 import 'package:flutter/material.dart';
 
 class CategoriaCard extends StatelessWidget {
   final String texto;
   final String categoria;
   final VoidCallback? onTap;
-  const CategoriaCard({super.key, required this.texto, required this.categoria, this.onTap});
+  const CategoriaCard({
+    super.key,
+    required this.texto,
+    required this.categoria,
+    this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -15,16 +21,16 @@ class CategoriaCard extends StatelessWidget {
       children: [
         Material(
           color: Colors.transparent,
-          borderRadius: BorderRadius.circular(24),
+          borderRadius: BorderRadius.circular(2),
           clipBehavior: Clip.antiAlias,
           child: InkWell(
             onTap: onTap,
             child: Container(
-              width: 120.0,
-              height: 120.0,
+              width: double.infinity,
+              height: 130,
               decoration: BoxDecoration(
                 color: AppColors.background,
-                borderRadius: BorderRadius.circular(24),
+                borderRadius: BorderRadius.circular(16),
                 image: DecorationImage(
                   image: AssetImage(categoria),
                   fit: BoxFit.cover,
@@ -38,10 +44,12 @@ class CategoriaCard extends StatelessWidget {
           width: 120.0,
           child: Text(
             texto,
-            textAlign: TextAlign.center,
+            textAlign: TextAlign.start,
             style: AppTextStyles.bodyBold,
           ),
         ),
+        SizedBox(height: 17,),
+        SizedBox(child: BottonComprar()),
       ],
     );
   }

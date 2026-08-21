@@ -1,6 +1,6 @@
 import 'package:clientes_app/core/constants/AppColors.dart';
 import 'package:clientes_app/core/constants/AppTextStyles.dart';
-import 'package:clientes_app/core/constants/AppStrings.dart';
+import 'package:clientes_app/core/constants/AppTexts.dart';
 import 'package:clientes_app/features/Auth/presentation/views/LoginMain.dart';
 import 'package:flutter/material.dart';
 
@@ -34,7 +34,7 @@ class BottonCerrarAesion extends StatelessWidget {
                 children: [
                   Icon(Icons.logout_rounded,size: 29,),
                   SizedBox(width: 10,),
-                  Text(AppStrings.bottonExitSesion, style: AppTextStyles.button),
+                  Text(AppTexts.aceptar, style: AppTextStyles.button),
                 ],
               ),
         ),

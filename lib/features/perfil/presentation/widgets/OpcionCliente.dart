@@ -1,4 +1,4 @@
-import 'package:clientes_app/core/constants/AppStrings.dart';
+import 'package:clientes_app/core/constants/AppTexts.dart';
 import 'package:clientes_app/features/perfil/presentation/widgets/ListTitleCliente.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +15,7 @@ class OpcionCliente extends StatelessWidget {
         OpcionList(
           icono: Icons.person_outline_rounded,
           onTapAccion: () {},
-          titulo: AppStrings.editarInfo,
+          titulo: AppTexts.aceptar,
         ),
         OpcionList(
           icono: Icons.location_on_outlined,

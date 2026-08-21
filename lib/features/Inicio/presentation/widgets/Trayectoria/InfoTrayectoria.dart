@@ -1,5 +1,5 @@
 import 'package:clientes_app/core/constants/AppTextStyles.dart';
-import 'package:clientes_app/core/constants/AppStrings.dart';
+import 'package:clientes_app/core/constants/AppTexts.dart';
 import 'package:flutter/material.dart';
 
 class InfoTrayectoria extends StatelessWidget {
@@ -10,9 +10,9 @@ class InfoTrayectoria extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(AppStrings.tituloTrayectoria, style: AppTextStyles.title),
+        Text(AppTexts.aceptar, style: AppTextStyles.title),
         SizedBox(height: 2),
-        Text(AppStrings.descTrayectoria, style: AppTextStyles.label,),
+        Text(AppTexts.aceptar, style: AppTextStyles.label,),
       ],
     );
   }

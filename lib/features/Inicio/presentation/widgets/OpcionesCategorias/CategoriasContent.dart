@@ -1,6 +1,5 @@
-import 'package:clientes_app/core/constants/AppTextStyles.dart';
-import 'package:clientes_app/core/constants/AppAssetsRoute.dart';
-import 'package:clientes_app/core/constants/AppStrings.dart';
+import 'package:clientes_app/features/Inicio/data/models/CategoriasList.dart';
+import 'package:clientes_app/features/Inicio/presentation/widgets/ContenedorPrincipal.dart';
 import 'package:clientes_app/features/Inicio/presentation/widgets/OpcionesCategorias/CategoriaCard.dart';
 import 'package:clientes_app/features/Inicio/presentation/widgets/OpcionesCategorias/infoCompraCategoria.dart';
 import 'package:flutter/material.dart';
@@ -18,53 +17,31 @@ class _CategoriasContentState extends State<CategoriasContent> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Padding(
-          padding: const EdgeInsets.only(top: 8, bottom: 16),
+        const Padding(
+          padding: EdgeInsets.only(top: 8, bottom: 16, left: 16, right: 16),
           child: InfoCompraCategoria(),
         ),
-
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
-          physics: BouncingScrollPhysics(),
-          padding: EdgeInsets.symmetric(horizontal: 16),
+          physics: const BouncingScrollPhysics(),
+          padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Row(
-            children: [
-              CategoriaCard(
-                texto: AppStrings.categoriaPromocion,
-                categoria: AppAssetsRoute.categoriaUno,
-                onTap: () {},
-              ),
-              SizedBox(width: 25),
-              CategoriaCard(
-                texto: AppStrings.categoriaUno,
-                categoria: AppAssetsRoute.categoriaUno,
-                onTap: () {},
-              ),
-              SizedBox(width: 25),
-              CategoriaCard(
-                texto: AppStrings.categoriaDos,
-                categoria: AppAssetsRoute.categoriaUno,
-                onTap: () {},
-              ),
-              SizedBox(width: 25),
-              CategoriaCard(
-                texto: AppStrings.categoriaTres,
-                categoria: AppAssetsRoute.categoriaUno,
-                onTap: () {},
-              ),
-              SizedBox(width: 25),
-              CategoriaCard(
-                texto: AppStrings.categoriaCuatro,
-                categoria: AppAssetsRoute.categoriaUno,
-                onTap: () {},
-              ),
-              SizedBox(width: 25),
-              CategoriaCard(
-                texto: AppStrings.categoriaCinco,
-                categoria: AppAssetsRoute.categoriaUno,
-                onTap: () {},
-              ),
-            ],
+            children: List.generate(CategoriasList.categorias.length, (index) {
+              return Padding(
+                padding: EdgeInsets.only(
+                  right: index == CategoriasList.categorias.length - 1 ? 0 : 8,
+                ),
+                child: ContenedorPrincipal(
+                  isPadding: true,
+                  compacto: true,
+                  contenidoSeccion: CategoriaCard(
+                    texto: CategoriasList.categorias[index].texto,
+                    categoria: CategoriasList.categorias[index].imagen,
+                    onTap: () {},
+                  ),
+                ),
+              );
+            }),
           ),
         ),
       ],

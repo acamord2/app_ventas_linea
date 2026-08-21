@@ -26,7 +26,7 @@ class NavbarHome extends StatelessWidget {
               iconTheme: WidgetStateProperty.resolveWith((states) {
                 if (states.contains(WidgetState.selected)) {
                   // Ícono seleccionado en color Blanco
-                  return const IconThemeData(color: AppColors.navbarBackground, size: 25);
+                  return const IconThemeData(color: AppColors.background, size: 25);
                 }
                 // Ícono deseleccionado
                 return IconThemeData(color: AppColors.primary, size: 25);
@@ -36,7 +36,7 @@ class NavbarHome extends StatelessWidget {
             ),
             child: NavigationBar(
               height: 75,
-              backgroundColor: AppColors.navbarBackground,
+              backgroundColor: AppColors.background,
               selectedIndex: indexSeleccionada,
               // Muestra siempre el texto debajo del ícono
               labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,

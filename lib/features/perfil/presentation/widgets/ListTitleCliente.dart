@@ -44,7 +44,7 @@ class OpcionList extends StatelessWidget {
           trailing: Icon(
             Icons.arrow_forward_ios_rounded,
             size: 16,
-            color: AppColors.textDisabled,
+            color: AppColors.border,
           ),
         ),
       ),
